@@ -298,52 +298,79 @@
     document.addEventListener("DOMContentLoaded", function () {
         const langButtons = document.querySelectorAll(".language-switcher .lang-btn");
       
-        // Zkontrolujeme, zda již byl jazyk uložen
-        const savedLanguage = localStorage.getItem("selectedLanguage");
-        if (savedLanguage) {
-          setLanguage(savedLanguage);
-        }
-      
-        // Přidáme posluchač událostí ke všem tlačítkům
-        langButtons.forEach(button => {
-          button.addEventListener("click", function () {
-            const selectedLanguage = this.getAttribute("data-lang");
-            localStorage.setItem("selectedLanguage", selectedLanguage);
-            setLanguage(selectedLanguage);
-          });
-        });
-      
-        // Funkce, která mění texty na stránce
-        function setLanguage(lang) {
-          // Definice překladů – dle potřeby rozšiřte objekt
-          const translations = {
-            "en": {
-              "introPretitle": "Hello",
-              "introTitle": "I'm Roman<br>Automotive photo &amp; video creator.",
-              "aboutBtn": "More About Me",
-              "contactBtn": "Get In Touch"
-            },
-            "cs": {
-              "introPretitle": "Ahoj",
-              "introTitle": "Jsem Roman<br>Automobilový fotograf &amp; video tvůrce.",
-              "aboutBtn": "Více o mně",
-              "contactBtn": "Kontaktovat mě"
+        document.addEventListener("DOMContentLoaded", function () {
+            const langButtons = document.querySelectorAll(".language-switcher .lang-btn");
+          
+            // Pokud již byl jazyk uložen, použijeme jej, jinak výchozí "en"
+            const savedLanguage = localStorage.getItem("selectedLanguage") || "en";
+            setLanguage(savedLanguage);
+          
+            langButtons.forEach(button => {
+              button.addEventListener("click", function () {
+                const selectedLanguage = this.getAttribute("data-lang");
+                localStorage.setItem("selectedLanguage", selectedLanguage);
+                setLanguage(selectedLanguage);
+              });
+            });
+          
+            // Funkce pro aktualizaci textů na stránce na základě klíčů (data-key)
+            function setLanguage(lang) {
+              const translations = {
+                "en": {
+                  "navIntro": "Intro",
+                  "navAbout": "About",
+                  "navWorks": "Works",
+                  "navContact": "Contact",
+                  "introPretitle": "Hello",
+                  "introTitle": "I'm Roman<br>Automotive photo &amp; video creator.",
+                  "introAboutBtn": "More About Me",
+                  "introContactBtn": "Get In Touch",
+                  "aboutTitle": "About Me.",
+                  "aboutText": "Hi, I'm Roman, a 19-year-old automotive photographer and videographer from the Czech Republic. My passion for automobiles has been with me from a young age and I capture their beauty through my work.",
+                  "worksTitle": "Selected Works.",
+                  "worksText": "Here are some examples of my work.",
+                  "numbersCustomers": "80+ Happy Customers",
+                  "numbersProjects": "120+ Projects Completed",
+                  "numbersCode": "23k+ Lines of Code",
+                  "numbersFeedback": "85+ Positive Feedback",
+                  "footerTitle": "Get In Touch.",
+                  "footerText": "Interested in working together? Feel free to contact me!",
+                  "footerCopyright": "© Copyright RWVisuals 2025"
+                },
+                "cs": {
+                  "navIntro": "Úvod",
+                  "navAbout": "O mně",
+                  "navWorks": "Práce",
+                  "navContact": "Kontakt",
+                  "introPretitle": "Ahoj",
+                  "introTitle": "Jsem Roman<br>Automobilový fotograf &amp; video tvůrce.",
+                  "introAboutBtn": "Více o mně",
+                  "introContactBtn": "Kontaktovat mě",
+                  "aboutTitle": "O mně.",
+                  "aboutText": "Ahoj, jsem Roman, 19letý automobilový fotograf a videograf z České republiky. Vášeň pro automobily mám od malička a zachytávám jejich krásu ve své práci.",
+                  "worksTitle": "Vybrané práce.",
+                  "worksText": "Zde jsou příklady mé práce.",
+                  "numbersCustomers": "80+ Spokojených zákazníků",
+                  "numbersProjects": "120+ Dokončených projektů",
+                  "numbersCode": "23k+ Řádků kódu",
+                  "numbersFeedback": "85+ Pozitivních ohlasů",
+                  "footerTitle": "Kontaktujte mě.",
+                  "footerText": "Máte zájem o spolupráci? Neváhejte mě kontaktovat!",
+                  "footerCopyright": "© Copyright RWVisuals 2025"
+                }
+              };
+          
+              // Projdeme všechny elementy, které mají atribut data-key, a aktualizujeme jejich obsah
+              const translatableElements = document.querySelectorAll("[data-key]");
+              translatableElements.forEach(el => {
+                const key = el.getAttribute("data-key");
+                if (translations[lang][key]) {
+                  el.innerHTML = translations[lang][key];
+                }
+              });
             }
-          };
-      
-          // Aktualizace textů – upravte selektory dle vaší HTML struktury
-          const pretitleEl = document.querySelector(".s-intro__content-pretitle") || document.querySelector(".intro-pretitle");
-          const titleEl = document.querySelector(".s-intro__content-title") || document.querySelector(".intro-title");
-          const aboutBtn = document.getElementById("aboutBtn");
-          const contactBtn = document.getElementById("contactBtn");
-      
-          if (pretitleEl) pretitleEl.innerHTML = translations[lang].introPretitle;
-          if (titleEl) titleEl.innerHTML = translations[lang].introTitle;
-          if (aboutBtn) aboutBtn.textContent = translations[lang].aboutBtn;
-          if (contactBtn) contactBtn.textContent = translations[lang].contactBtn;
-        }
-      });
-      
+          });
+          
 
 
    /* Initialize
