@@ -4440,30 +4440,3 @@ td:last-child {
     .ss-go-top {
         right: -2rem;
     }
-    
-    .flag {
-        width: 50px;
-        height: auto;
-        cursor: pointer;
-        transition: transform 0.3s ease-in-out;
-    }
-    
-    .flag:hover {
-        transform: scale(1.2);
-    }
-    
-    /* Když se třída "visible" přidá přes JS, vlajky se zobrazí */
-    #language-switcher.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    
-    #language-switcher {
-        position: fixed;
-        bottom: 20px;  /* Posun od spodního okraje */
-        left: 20px;  /* Posun od levého okraje */
-        display: flex;
-        gap: 10px;
-        z-index: 1000;
-    }
-    

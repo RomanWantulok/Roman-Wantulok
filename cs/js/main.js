@@ -311,26 +311,4 @@
 
     })();
 
-    document.addEventListener("DOMContentLoaded", function () {
-        const languageSwitcher = document.getElementById("language-switcher");
-        const czFlag = document.getElementById("cz-flag");
-        const gbFlag = document.getElementById("gb-flag");
-    
-        // Po 300 ms vlajky pomalu zobrazíme
-        setTimeout(() => {
-            languageSwitcher.classList.add("visible");
-        }, 300);
-    
-        czFlag.addEventListener("click", function () {
-            window.location.href = "/cs/"; // Přesměrování na českou verzi
-        });
-    
-        gbFlag.addEventListener("click", function () {
-            if (window.location.pathname.startsWith("/cs")) {
-                window.location.href = "https://rwvisuals.eu"; // Přesměrování na hlavní stránku
-            }
-        });
-    });
-    
-
 })(document.documentElement);
