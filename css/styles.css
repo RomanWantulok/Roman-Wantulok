@@ -4441,26 +4441,3 @@ td:last-child {
         right: -2rem;
     }
 }
-
-/* Persistentní přepínač jazyka v levém dolním rohu */
-.persistent-lang-switcher {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    display: flex;
-    gap: 10px;
-    z-index: 2000;
-  }
-  
-  .persistent-lang-switcher .lang-btn {
-    background: transparent;
-    border: none;
-    font-size: 28px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-  }
-  
-  .persistent-lang-switcher .lang-btn:hover {
-    transform: scale(1.1);
-  }
-  
