@@ -4459,7 +4459,9 @@ td:last-child {
     background-color: #fff;
     border: none;
     border-radius: 50%;
-    padding: 17px;
+    width: 40px; /* Set equal width */
+    height: 40px; /* Set equal height */
+    padding: 10px;
     cursor: pointer;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, background-color 0.3s ease;
@@ -4470,8 +4472,8 @@ td:last-child {
   }
   
   #lang-toggle img {
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     display: block;
     margin: auto;
   }
