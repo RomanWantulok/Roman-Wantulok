@@ -4442,11 +4442,43 @@ td:last-child {
     }
 }
 
-/* Kontejner pro jazykové možnosti */
-#lang-options {
+/* Kontejner celého přepínače – umístěný v levém dolním rohu */
+#language-switcher {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 1000;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    align-items: flex-start;
+    font-family: sans-serif;
+  }
+  
+  /* Tlačítko s ikonou */
+  #lang-toggle {
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  #lang-toggle:hover {
+    transform: scale(1.05);
+  }
+  
+  #lang-toggle img {
+    width: 24px;
+    height: 24px;
+    display: block;
+  }
+  
+  /* Kontejner pro jazykové volby (vlajky) – skrytý ve výchozím stavu */
+  #lang-options {
+    display: flex;
+    gap: 12px;
     margin-bottom: 10px;
     opacity: 0;
     transform: translateY(10px);
@@ -4454,54 +4486,30 @@ td:last-child {
     pointer-events: none;
   }
   
-  /* Styl jednotlivých boxů s vlajkami */
+  /* Viditelný stav nabídky */
+  #language-switcher.active #lang-options {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  
+  /* Odkazy s vlajkami */
   #lang-options a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px; /* Pevná šířka */
-    height: 50px; /* Pevná výška */
+    display: block;
     background-color: #fff;
-    border-radius: 12px;
+    border-radius: 4px;
+    padding: 5px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
   }
   
   #lang-options a:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
   }
   
-  /* Styl pro vlajky */
   #lang-options a img {
-    width: 32px; /* Zvětší vlajky */
-    height: 32px;
-    object-fit: cover;
-    border-radius: 50%;
-  }
-  
-  /* Hlavní tlačítko s ikonou */
-  #lang-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 55px;
-    height: 55px;
-    background-color: #fff;
-    border-radius: 50%;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    cursor: pointer;
-    border: none;
-  }
-  
-  #lang-toggle:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Styl ikony globu */
-  #lang-toggle img {
     width: 28px;
-    height: 28px;
+    height: auto;
+    display: block;
   }
   
