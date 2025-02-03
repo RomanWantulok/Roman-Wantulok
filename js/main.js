@@ -311,17 +311,21 @@
 
     })();
 
-    document.addEventListener("DOMContentLoaded", function() {
-        var langButtons = document.querySelectorAll(".lang-btn");
-        langButtons.forEach(function(btn) {
-          btn.addEventListener("click", function() {
-            var lang = this.getAttribute("data-lang");
-            if (lang === "cs") {
-              window.location.href = "/cs/";
-            } else {
-              window.location.href = "/";
-            }
-          });
+    document.addEventListener('DOMContentLoaded', function () {
+        const switcher = document.getElementById('language-switcher');
+        const toggleBtn = document.getElementById('lang-toggle');
+      
+        // Otevření/zavření nabídky po kliknutí na tlačítko
+        toggleBtn.addEventListener('click', function (e) {
+          e.stopPropagation(); // zabráníme šíření kliknutí mimo modul
+          switcher.classList.toggle('active');
+        });
+      
+        // Zavření nabídky při kliknutí mimo modul
+        document.addEventListener('click', function (event) {
+          if (!switcher.contains(event.target)) {
+            switcher.classList.remove('active');
+          }
         });
       });
       

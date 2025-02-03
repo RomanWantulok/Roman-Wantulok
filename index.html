@@ -595,21 +595,26 @@
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 
-      <!-- Přepínač jazyků -->
-  <div class="language-switcher">
-    <!-- Postavička vykukující zpoza boxu -->
-    <div class="character">
-      <img src="character.png" alt="Postavička">
+    <!-- Modul pro změnu jazyka -->
+<div id="language-switcher">
+    <!-- Rozevírací nabídka s vlajkami (skrytá ve výchozím stavu) -->
+    <div id="lang-options">
+      <!-- Česká vlajka: přesměruje na /cs/ -->
+      <a href="/cs/" title="Čeština">
+        <img src="path_to_czech_flag.png" alt="CZ">
+      </a>
+      <!-- Anglická vlajka: přesměruje na https://rwvisuals.eu/ -->
+      <a href="https://rwvisuals.eu/" title="English">
+        <img src="path_to_english_flag.png" alt="EN">
+      </a>
     </div>
-    <button class="lang-btn" data-lang="en">
-      <img src="english-flag.png" alt="Anglicky">
-    </button>
-    <button class="lang-btn" data-lang="cs">
-      <img src="czech-flag.png" alt="Česky">
+  
+    <!-- Tlačítko pro otevření nabídky -->
+    <button id="lang-toggle" aria-label="Změna jazyka">
+      <img src="path_to_globe_icon.svg" alt="Language">
     </button>
   </div>
-
-  <script src="script.js"></script>
+  
 
 </body>
 </html>
