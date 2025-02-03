@@ -4505,7 +4505,7 @@ td:last-child {
 .lang-btn img {
     width: 60px; /* Nastavte požadovanou velikost */
     height: auto;
-    border-radius: 5px; /* Mírné zaoblení rohů pro lepší vzhled */
+    border-radius: 50px; /* Mírné zaoblení rohů pro lepší vzhled */
     transition: transform 0.2s ease-in-out;
 }
 
