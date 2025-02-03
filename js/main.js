@@ -311,4 +311,18 @@
 
     })();
 
+    document.addEventListener("DOMContentLoaded", function() {
+        var langButtons = document.querySelectorAll(".lang-btn");
+        langButtons.forEach(function(btn) {
+          btn.addEventListener("click", function() {
+            var lang = this.getAttribute("data-lang");
+            if (lang === "cs") {
+              window.location.href = "/cs/";
+            } else {
+              window.location.href = "/";
+            }
+          });
+        });
+      });
+      
 })(document.documentElement);

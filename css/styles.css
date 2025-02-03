@@ -4441,3 +4441,46 @@ td:last-child {
         right: -2rem;
     }
 }
+
+/* Styl pro přepínač jazyků */
+.language-switcher {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #000; /* Černé pozadí */
+    border: 2px solid #fff; /* Bílý rámeček */
+    border-radius: 12px;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    z-index: 1; /* Zajišťuje, že box je nad postavičkou */
+  }
+  
+  /* Styl pro tlačítka jazyků */
+  .lang-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .lang-btn img {
+    width: 30px;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  /* Styl pro postavičku */
+  .character {
+    position: absolute;
+    top: -20px; /* Posun nad box */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1; /* Zajišťuje, že postavička je za boxem */
+  }
+  
+  .character img {
+    width: 40px;
+    height: auto;
+  }
+  
