@@ -312,8 +312,14 @@
     })();
 
     document.addEventListener("DOMContentLoaded", function () {
+        const languageSwitcher = document.getElementById("language-switcher");
         const czFlag = document.getElementById("cz-flag");
         const gbFlag = document.getElementById("gb-flag");
+    
+        // Po 300 ms vlajky pomalu zobrazíme
+        setTimeout(() => {
+            languageSwitcher.classList.add("visible");
+        }, 300);
     
         czFlag.addEventListener("click", function () {
             window.location.href = "/cs/"; // Přesměrování na českou verzi
@@ -325,6 +331,6 @@
             }
         });
     });
-    
+     
 
 })(document.documentElement);
