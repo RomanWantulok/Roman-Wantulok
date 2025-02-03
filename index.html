@@ -15,7 +15,7 @@
       // Zjistíme jazyk z prohlížeče
       const browserLang = navigator.language || navigator.userLanguage;
       // Nastavíme výchozí jazyk
-      const targetLang = browserLang.toLowerCase().startsWith("cs") ? "cs" : "en";
+      const targetLang = browserLang.toLowerCase().startsWith("en") ? "cs" : "en";
       // Přesměrujeme uživatele
       window.location.href = '/' + targetLang + '/';
     });
@@ -601,6 +601,6 @@
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-    
+
 </body>
 </html>
