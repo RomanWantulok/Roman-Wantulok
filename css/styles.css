@@ -4464,6 +4464,9 @@ td:last-child {
     padding: 10px;
     cursor: pointer;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    display: flex; /* Use flexbox to center the content */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
     transition: transform 0.3s ease, background-color 0.3s ease;
   }
   
