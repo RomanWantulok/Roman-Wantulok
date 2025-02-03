@@ -4492,16 +4492,25 @@ td:last-child {
     gap: 20px;
 }
 
+/* Styl vlajek */
 .lang-btn {
     background: transparent;
     border: none;
     font-size: 50px; /* Větší vlajky */
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 0;
+}
+
+.lang-btn img {
+    width: 60px; /* Nastavte požadovanou velikost */
+    height: auto;
+    border-radius: 5px; /* Mírné zaoblení rohů pro lepší vzhled */
+    transition: transform 0.2s ease-in-out;
 }
 
 .lang-btn:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 /* Animovaná postavička */
