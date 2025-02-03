@@ -4521,6 +4521,7 @@ td:last-child {
     transform: translateX(-50%);
     font-size: 50px; /* Velikost postavičky */
     animation: bounce 2s infinite ease-in-out;
+    pointer-events: none; /* Zabrání klikání na ikonu */
 }
 
 /* Animace pro postavičku */
