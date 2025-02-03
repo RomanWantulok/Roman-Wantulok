@@ -4470,3 +4470,12 @@ td:last-child {
         transform: translateY(0);
     }
     
+    #language-switcher {
+        position: fixed;
+        bottom: 20px;  /* Posun od spodního okraje */
+        left: 20px;  /* Posun od levého okraje */
+        display: flex;
+        gap: 10px;
+        z-index: 1000;
+    }
+    
