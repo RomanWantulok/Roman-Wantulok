@@ -295,6 +295,56 @@
 
     }; // end ssMoveTo
 
+    document.addEventListener("DOMContentLoaded", function () {
+        const langButtons = document.querySelectorAll(".language-switcher .lang-btn");
+      
+        // Zkontrolujeme, zda již byl jazyk uložen
+        const savedLanguage = localStorage.getItem("selectedLanguage");
+        if (savedLanguage) {
+          setLanguage(savedLanguage);
+        }
+      
+        // Přidáme posluchač událostí ke všem tlačítkům
+        langButtons.forEach(button => {
+          button.addEventListener("click", function () {
+            const selectedLanguage = this.getAttribute("data-lang");
+            localStorage.setItem("selectedLanguage", selectedLanguage);
+            setLanguage(selectedLanguage);
+          });
+        });
+      
+        // Funkce, která mění texty na stránce
+        function setLanguage(lang) {
+          // Definice překladů – dle potřeby rozšiřte objekt
+          const translations = {
+            "en": {
+              "introPretitle": "Hello",
+              "introTitle": "I'm Roman<br>Automotive photo &amp; video creator.",
+              "aboutBtn": "More About Me",
+              "contactBtn": "Get In Touch"
+            },
+            "cs": {
+              "introPretitle": "Ahoj",
+              "introTitle": "Jsem Roman<br>Automobilový fotograf &amp; video tvůrce.",
+              "aboutBtn": "Více o mně",
+              "contactBtn": "Kontaktovat mě"
+            }
+          };
+      
+          // Aktualizace textů – upravte selektory dle vaší HTML struktury
+          const pretitleEl = document.querySelector(".s-intro__content-pretitle") || document.querySelector(".intro-pretitle");
+          const titleEl = document.querySelector(".s-intro__content-title") || document.querySelector(".intro-title");
+          const aboutBtn = document.getElementById("aboutBtn");
+          const contactBtn = document.getElementById("contactBtn");
+      
+          if (pretitleEl) pretitleEl.innerHTML = translations[lang].introPretitle;
+          if (titleEl) titleEl.innerHTML = translations[lang].introTitle;
+          if (aboutBtn) aboutBtn.textContent = translations[lang].aboutBtn;
+          if (contactBtn) contactBtn.textContent = translations[lang].contactBtn;
+        }
+      });
+      
+
 
    /* Initialize
     * ------------------------------------------------------ */

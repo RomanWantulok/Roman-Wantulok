@@ -4442,3 +4442,25 @@ td:last-child {
     }
 }
 
+/* Styl pro jazykový přepínač */
+.language-switcher {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2000; /* aby byl nad ostatními prvky */
+    display: flex;
+    gap: 10px;
+  }
+  
+  .language-switcher .lang-btn {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .language-switcher .lang-btn:hover {
+    transform: scale(1.1);
+  }
+  
