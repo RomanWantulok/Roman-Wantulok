@@ -311,4 +311,20 @@
 
     })();
 
+    document.addEventListener("DOMContentLoaded", function () {
+        const czFlag = document.getElementById("cz-flag");
+        const gbFlag = document.getElementById("gb-flag");
+    
+        czFlag.addEventListener("click", function () {
+            window.location.href = "/cs/"; // Přesměrování na českou verzi
+        });
+    
+        gbFlag.addEventListener("click", function () {
+            if (window.location.pathname.startsWith("/cs")) {
+                window.location.href = "https://rwvisuals.eu"; // Přesměrování na hlavní stránku
+            }
+        });
+    });
+    
+
 })(document.documentElement);
