@@ -4459,7 +4459,7 @@ td:last-child {
     background-color: #fff;
     border: none;
     border-radius: 50%;
-    padding: 20px;
+    padding: 15px;
     cursor: pointer;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, background-color 0.3s ease;
@@ -4472,7 +4472,7 @@ td:last-child {
   #lang-toggle img {
     width: 24px;
     height: 24px;
-    display: flex;
+    display: block;
   }
   
   /* Kontejner pro jazykové volby (vlajky) – skrytý ve výchozím stavu */
