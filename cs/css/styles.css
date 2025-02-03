@@ -4440,18 +4440,6 @@ td:last-child {
     .ss-go-top {
         right: -2rem;
     }
-
-    #language-switcher {
-        position: fixed;
-        bottom: 20px;
-        left: 20px;
-        display: flex;
-        gap: 10px;
-        z-index: 1000;
-        opacity: 0;  /* Skryje vlajky při načtení stránky */
-        transform: translateY(20px); /* Posune je dolů pro jemný efekt */
-        transition: opacity 1s ease-out, transform 1s ease-out;
-    }
     
     .flag {
         width: 50px;
