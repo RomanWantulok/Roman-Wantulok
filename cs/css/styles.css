@@ -4440,3 +4440,86 @@ td:last-child {
     .ss-go-top {
         right: -2rem;
     }
+
+    
+/* Kontejner celého přepínače – umístěný v levém dolním rohu */
+#language-switcher {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: sans-serif;
+  }
+  
+  /* Tlačítko s ikonou */
+  #lang-toggle {
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px; /* Set equal width */
+    height: 40px; /* Set equal height */
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    display: flex; /* Use flexbox to center the content */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  #lang-toggle:hover {
+    transform: scale(1.05);
+  }
+  
+  #lang-toggle img {
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin: auto;
+  }
+  
+  /* Kontejner pro jazykové volby (vlajky) – skrytý ve výchozím stavu */
+  #lang-options {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+  }
+  
+  /* Viditelný stav nabídky */
+  #language-switcher.active #lang-options {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  
+/* Odkazy s vlajkami */
+#lang-options a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Pevná šířka boxu */
+    height: 40px; /* Pevná výška boxu */
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+#lang-options a:hover {
+    transform: scale(1.05);
+}
+
+/* Styl pro vlajky */
+#lang-options a img {
+    width: 24px; /* Menší vlajky pro lepší proporce */
+    height: auto;
+    display: block;
+    margin: auto;
+}

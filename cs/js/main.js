@@ -311,4 +311,23 @@
 
     })();
 
+    document.addEventListener('DOMContentLoaded', function () {
+        const switcher = document.getElementById('language-switcher');
+        const toggleBtn = document.getElementById('lang-toggle');
+      
+        // Otevření/zavření nabídky po kliknutí na tlačítko
+        toggleBtn.addEventListener('click', function (e) {
+          e.stopPropagation(); // zabráníme šíření kliknutí mimo modul
+          switcher.classList.toggle('active');
+        });
+      
+        // Zavření nabídky při kliknutí mimo modul
+        document.addEventListener('click', function (event) {
+          if (!switcher.contains(event.target)) {
+            switcher.classList.remove('active');
+          }
+        });
+      });
+     
+
 })(document.documentElement);
