@@ -311,4 +311,29 @@
 
     })();
 
+    document.addEventListener("DOMContentLoaded", function () {
+        const popup = document.getElementById("languagePopup");
+        const langButtons = document.querySelectorAll(".lang-btn");
+    
+        // Pokud už byl jazyk vybrán, pop-up se nezobrazí
+        if (!localStorage.getItem("selectedLanguage")) {
+            popup.style.display = "flex";
+        }
+    
+        // Při kliknutí na jazykové tlačítko
+        langButtons.forEach(button => {
+            button.addEventListener("click", function () {
+                const selectedLanguage = this.getAttribute("data-lang");
+                localStorage.setItem("selectedLanguage", selectedLanguage);
+    
+                // Přesměrování uživatele podle výběru jazyka
+                if (selectedLanguage === "cs") {
+                    window.location.href = "/cs/"; // Přesměrování na českou verzi
+                } else {
+                    popup.style.display = "none"; // Skrýt pop-up, zůstává na hlavní doméně
+                }
+            });
+        });
+    });
+    
 })(document.documentElement);

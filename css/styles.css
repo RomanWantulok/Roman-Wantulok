@@ -4441,3 +4441,82 @@ td:last-child {
         right: -2rem;
     }
 }
+
+/* Pop-up overlay – průhledné černé pozadí */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Lehce průhledné pozadí */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Pop-up box */
+.popup-content {
+    background: #fff; /* Bílý box */
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Glow efekt */
+    animation: scaleUp 0.4s ease-in-out;
+    position: relative;
+}
+
+/* Animace pro pop-up */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes scaleUp {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Nadpis v pop-upu */
+.popup-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+/* Tlačítka pro výběr jazyka */
+.popup-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.lang-btn {
+    background: transparent;
+    border: none;
+    font-size: 50px; /* Větší vlajky */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lang-btn:hover {
+    transform: scale(1.2);
+}
+
+/* Animovaná postavička */
+.popup-character {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 50px; /* Velikost postavičky */
+    animation: bounce 2s infinite ease-in-out;
+}
+
+/* Animace pro postavičku */
+@keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-10px); }
+}
+
