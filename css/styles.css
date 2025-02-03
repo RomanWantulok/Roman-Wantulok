@@ -4513,6 +4513,11 @@ td:last-child {
     transform: scale(1.1);
 }
 
+/* Odstranění rámečku při kliknutí */
+.lang-btn:focus {
+    outline: none; /* Zabrání obrysovému rámečku */
+}
+
 /* Animovaná postavička */
 .popup-character {
     position: absolute;
