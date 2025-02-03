@@ -4495,21 +4495,24 @@ td:last-child {
   
   /* Odkazy s vlajkami */
   #lang-options a {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Pevná šířka boxu */
+    height: 40px; /* Pevná výška boxu */
     background-color: #fff;
     border-radius: 4px;
-    padding: 5px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease;
   }
   
   #lang-options a:hover {
-    transform: translateY(-2px);
+    transform: scale(1.05));
   }
   
   #lang-options a img {
-    width: 28px;
+    width: 24px;
     height: auto;
-    display: block;
+    display: flex;
   }
   
