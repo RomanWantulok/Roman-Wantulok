@@ -4475,9 +4475,10 @@ td:last-child {
   }
   
   #lang-toggle img {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     display: block;
+    margin: auto;
   }
   
   /* Kontejner pro jazykové volby (vlajky) – skrytý ve výchozím stavu */
