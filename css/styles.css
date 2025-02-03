@@ -4478,7 +4478,7 @@ td:last-child {
   /* Kontejner pro jazykové volby (vlajky) – skrytý ve výchozím stavu */
   #lang-options {
     display: flex;
-    gap: 12px;
+    gap: 8px;
     margin-bottom: 10px;
     opacity: 0;
     transform: translateY(10px);
