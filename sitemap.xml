@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://rwvisuals.eu/</loc>
+  <lastmod>2025-02-06T21:41:47+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://rwvisuals.eu/index.html</loc>
+  <lastmod>2025-02-06T21:41:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rwvisuals.eu/cs/cv/English%20CV%20-%20Wantulok%20Roman.pdf</loc>
+  <lastmod>2025-02-06T21:41:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rwvisuals.eu/cs/</loc>
+  <lastmod>2025-02-06T21:41:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rwvisuals.eu/cs/index.html</loc>
+  <lastmod>2025-02-06T21:41:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rwvisuals.eu/cs/cv/%C4%8Cesk%C3%A9%20CV%20-%20Wantulok%20Roman.pdf</loc>
+  <lastmod>2025-02-06T21:41:47+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
