@@ -4525,10 +4525,6 @@ td:last-child {
 }
 
     <style>
-  #kofi-button {
-    position: fixed;
-    bottom: 20px; /* Vzdálenost od dolního okraje */
-    right: 20px;  /* Vzdálenost od pravého okraje */
-    z-index: 9999; /* Aby tlačítko bylo nad ostatními prvky */
-  }
+.floatingchat-container-wrap { left:unset; right: 16px; }
+.floating-chat-kofi-popup-iframe { left:unset; right: 16px; }
 </style>
