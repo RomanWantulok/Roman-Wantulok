@@ -4523,3 +4523,12 @@ td:last-child {
     display: block;
     margin: auto;
 }
+
+    <style>
+  #kofi-button {
+    position: fixed;
+    bottom: 20px; /* Vzdálenost od dolního okraje */
+    right: 20px;  /* Vzdálenost od pravého okraje */
+    z-index: 9999; /* Aby tlačítko bylo nad ostatními prvky */
+  }
+</style>
