@@ -4047,17 +4047,14 @@ td:last-child {
  * ## testimonials
  * ------------------------------------------------------------------- */
 .s-testimonials {
-    padding-top   : var(--vspace-3);
-    padding-bottom: var(--vspace-2_5);
-	font-size     : 0.9rem;            /* zmenší všechny texty uvnitř */
+    padding-top   : var(--vspace-4_5);
+    padding-bottom: var(--vspace-3);
 }
 
 .s-testimonials__header {
     margin-top   : 0;
     margin-bottom: var(--vspace-2);
     text-align   : center;
-	font-size    : 1.8rem; /* nebo klidně 1.5rem, záleží jak malý chceš */
-    line-height  : 1.2;
 }
 
 .s-testimonials .swiper-container {
