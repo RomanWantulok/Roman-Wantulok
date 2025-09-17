@@ -4055,6 +4055,8 @@ td:last-child {
     margin-top   : 0;
     margin-bottom: var(--vspace-2);
     text-align   : center;
+	font-size    : 1.8rem; /* nebo klidně 1.5rem, záleží jak malý chceš */
+    line-height  : 1.2;
 }
 
 .s-testimonials .swiper-container {
