@@ -4047,8 +4047,9 @@ td:last-child {
  * ## testimonials
  * ------------------------------------------------------------------- */
 .s-testimonials {
-    padding-top   : var(--vspace-4_5);
-    padding-bottom: var(--vspace-4);
+    padding-top   : var(--vspace-3);
+    padding-bottom: var(--vspace-2_5);
+	font-size     : 0.9rem;            /* zmenší všechny texty uvnitř */
 }
 
 .s-testimonials__header {
